@@ -1,0 +1,15 @@
+{
+  "name": "viveroeljardin.mx",
+  "version": "1.0.0",
+  "description": "Página de Vivero el Jardin",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "onamis.eu",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.21.0",
+    "gulp": "^3.9.1"
+  }
+}
