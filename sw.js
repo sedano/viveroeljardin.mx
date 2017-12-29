@@ -160,7 +160,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "caf974b6067eece38674a24f11e08df6"
+    "revision": "204f4d3c504a173a286bf98694168915"
   },
   {
     "url": "logo.png",
