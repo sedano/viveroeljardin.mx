@@ -36,7 +36,7 @@ const fileManifest = [
   },
   {
     "url": "assets/css/main.css",
-    "revision": "66411354ab550d3d531f0a18e945a628"
+    "revision": "59793015af35c12cf47019b2f8c739e7"
   },
   {
     "url": "assets/fonts/fontawesome-webfont.eot",
