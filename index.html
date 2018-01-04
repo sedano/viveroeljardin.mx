@@ -70,13 +70,17 @@
 		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
 		* using 'navigator.sendBeacon' in browser that support it.
 		*/
-		var trackOutboundLink = function (categoryName, url) {
+		var trackOutboundLink = function (categoryName, isExternal, url) {
 			gtag('event', 'click', {
 				'event_category': categoryName,
 				'event_label': url,
-				'transport_type': 'beacon',
-				'event_callback': function () { window.open(url, '_blank'); }
+				'transport_type': 'beacon'
 			});
+			if (isExternal) {
+				window.open(url, '_blank');
+			} else {
+				document.location = url;
+			}
 		}
 	</script>
 </head>
@@ -191,7 +195,7 @@
 									<ul class="actions">
 										<li>
 											<a href="https://www.google.com/maps/dir//Vivero+El+Jard%C3%ADn/data=!4m8!4m7!1m0!1m5!1m1!1s0x8428ac64da89b55f:0xffc9e2a8bed784a6!2m2!1d-103.43883799999999!2d20.620006?_ga=2.21399547.1182446503.1514317659-1594905411.1513956759"
-											 onclick="trackOutboundLink('Google Maps','https://www.google.com/maps/dir//Vivero+El+Jard%C3%ADn/data=!4m8!4m7!1m0!1m5!1m1!1s0x8428ac64da89b55f:0xffc9e2a8bed784a6!2m2!1d-103.43883799999999!2d20.620006?_ga=2.21399547.1182446503.1514317659-1594905411.1513956759'); return false;"
+											 onclick="trackOutboundLink('Google Maps',true,'https://www.google.com/maps/dir//Vivero+El+Jard%C3%ADn/data=!4m8!4m7!1m0!1m5!1m1!1s0x8428ac64da89b55f:0xffc9e2a8bed784a6!2m2!1d-103.43883799999999!2d20.620006?_ga=2.21399547.1182446503.1514317659-1594905411.1513956759'); return false;"
 											 target="_blank" class="button special icon fa-map">Direcciones</a>
 										</li>
 									</ul>
@@ -200,16 +204,15 @@
 									<h3>Contacto</h3>
 									<p>Tel: 36847261
 										<br>Correo:
-										<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto','mailto:info@viveroeljardin.mx'); return false;"
-										 target="_blank">info@viveroeljardin.mx</a>
+										<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto',false,'mailto:info@viveroeljardin.mx'); return false;">info@viveroeljardin.mx</a>
 									</p>
 
 									<ul class="actions">
 										<li>
-											<a href="tel:36847261" onclick="trackOutboundLink('Tel','tel:36847261'); return false;" target="_blank" class="button special icon fa-phone">Llamar</a>
+											<a href="tel:36847261" onclick="trackOutboundLink('Tel',false,'tel:36847261'); return false;" class="button special icon fa-phone">Llamar</a>
 										</li>
 										<li>
-											<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp','https://api.whatsapp.com/send?phone=523317158679'); return false;"
+											<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp',true,'https://api.whatsapp.com/send?phone=523317158679'); return false;"
 											 target="_blank" class="button special icon fa-whatsapp">Whatsapp</a>
 										</li>
 									</ul>
@@ -300,20 +303,20 @@
 		<div class="container">
 			<ul class="icons">
 				<li>
-					<a href="https://www.facebook.com/viveroeljardin.mx" onclick="trackOutboundLink('Facebook','https://www.facebook.com/viveroeljardin.mx'); return false;"
+					<a href="https://www.facebook.com/viveroeljardin.mx" onclick="trackOutboundLink('Facebook',true,'https://www.facebook.com/viveroeljardin.mx'); return false;"
 					 target="_blank" class="icon fa-facebook">
 						<span class="label">Facebook</span>
 					</a>
 				</li>
 				<li>
-					<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp','https://api.whatsapp.com/send?phone=523317158679'); return false;"
+					<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp',true,'https://api.whatsapp.com/send?phone=523317158679'); return false;"
 					 target="_blank" class="icon fa-whatsapp">
 						<span class="label">Whatsapp</span>
 					</a>
 				</li>
 				<li>
-					<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto','mailto:info@viveroeljardin.mx'); return false;"
-					 target="_blank" class="icon fa-envelope-o">
+					<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto',false,'mailto:info@viveroeljardin.mx'); return false;"
+					 class="icon fa-envelope-o">
 						<span class="label">Email</span>
 					</a>
 				</li>
