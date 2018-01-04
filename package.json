@@ -9,7 +9,7 @@
   "author": "onamis.eu",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.21.0",
+    "browser-sync": "^2.23.2",
     "gulp": "^3.9.1",
     "workbox-build": "^2.1.2"
   }

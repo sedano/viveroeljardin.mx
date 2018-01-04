@@ -1,5 +1,7 @@
 {
     "name": "Vivero el Jard\u00edn",
+    "short_name": "Vivero el Jard\u00edn",
+    "start_url": "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -9,6 +11,11 @@
         {
             "src": "/android-chrome-384x384.png",
             "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],

@@ -27,6 +27,10 @@ const fileManifest = [
     "revision": "f81753d0915521f897f45339522bffc0"
   },
   {
+    "url": "android-chrome-512x512.png",
+    "revision": "6d6ea4e26444409207250bb2708687c9"
+  },
+  {
     "url": "apple-touch-icon.png",
     "revision": "b52ce9a64dd91033f289d2796c9831b1"
   },
@@ -91,14 +95,6 @@ const fileManifest = [
     "revision": "e4e40b0c82d228add33b5bcfe276a859"
   },
   {
-    "url": "demo.html",
-    "revision": "e09f2caf69c23a737d01a74de719ec7b"
-  },
-  {
-    "url": "elements.html",
-    "revision": "d65e4938af1682c1da6e9a5925d80cdd"
-  },
-  {
     "url": "favicon-16x16.png",
     "revision": "26729df41f38c1b9023dc737d658ef62"
   },
@@ -160,7 +156,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "204f4d3c504a173a286bf98694168915"
+    "revision": "083fcc3484bd611c13e3c54d41092a97"
   },
   {
     "url": "logo.png",
@@ -168,7 +164,7 @@ const fileManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "e25fd9752ce88dbde6ae7077a8c4318e"
+    "revision": "0f5017735a1cacd96b52e554f62a13cc"
   },
   {
     "url": "mstile-150x150.png",
