@@ -13,11 +13,31 @@ gulp.task('browser-sync', () => {
 gulp.task('sw', () => {
     return workbox.generateSW({
         globDirectory: './',
-        globPatterns: ['**\/*.{html,js,css,png,jpg,eot,svg,ttf,woff,woff2,otf,ico,json,xml}'],
+        globPatterns: ['**\/*.{html,js,css,png,eot,svg,ttf,woff,woff2,otf,ico,json,xml}'],
         globIgnores: ['images/original/**\/*.*', 'node_modules/**\/*.*', 'package**.json'],
         swDest: './sw.js',
         clientsClaim: true,
-        skipWaiting: true
+        skipWaiting: true,
+        runtimeCaching: [{
+            urlPattern: /.jpg$/,
+            handler: 'cacheFirst',
+            options: {
+                cacheName: 'image-cache',
+                cacheExpiration: {
+                    maxEntries: 20,
+                }
+            }
+        },
+        {
+            urlPattern: /fonts/,
+            handler: 'cacheFirst',
+            options: {
+                cacheName: 'font-cache',
+                cacheExpiration: {
+                    maxEntries: 5,
+                }
+            }
+        }],
     }).then(() => {
         console.info('Service worker generation completed.');
     }).catch((error) => {

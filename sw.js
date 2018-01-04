@@ -107,8 +107,12 @@ const fileManifest = [
     "revision": "802437deb2e6c525f12e2c01b439d28a"
   },
   {
+    "url": "gallery.html",
+    "revision": "707e76d2c8b227fb86acba71875ec968"
+  },
+  {
     "url": "gulpfile.js",
-    "revision": "862667f2411d08754e720ad2129eaa88"
+    "revision": "7f79869c09a25532ffffe8a6e591ffac"
   },
   {
     "url": "images/ic_jardin.svg",
@@ -127,36 +131,8 @@ const fileManifest = [
     "revision": "32de16a57af6cf4037b3a19b9583f171"
   },
   {
-    "url": "images/slide00.jpg",
-    "revision": "75e2f76d13953c851aff2bfea2e32688"
-  },
-  {
-    "url": "images/slide01.jpg",
-    "revision": "587e65660071c4e7390eeecdebda38f2"
-  },
-  {
-    "url": "images/slide02.jpg",
-    "revision": "851e2da36a08c700dad14c041984fb05"
-  },
-  {
-    "url": "images/slide03.jpg",
-    "revision": "5b534da6fec1ecbbdfc5c1b329c8f751"
-  },
-  {
-    "url": "images/slide04.jpg",
-    "revision": "f1655ae35f7aee807618f8545817fa8e"
-  },
-  {
-    "url": "images/slide05.jpg",
-    "revision": "e58ebc1a585b70c132d0d6ef4532f296"
-  },
-  {
-    "url": "images/slide06.jpg",
-    "revision": "b482d6ffcae99f53411fd4f4dde43a8f"
-  },
-  {
     "url": "index.html",
-    "revision": "7b786a6939250a8f76d949f938e3bd83"
+    "revision": "fdd8edadc2bf3bc3c3c40b67afd62b36"
   },
   {
     "url": "logo.png",
@@ -181,3 +157,15 @@ const workboxSW = new self.WorkboxSW({
   "clientsClaim": true
 });
 workboxSW.precache(fileManifest);
+workboxSW.router.registerRoute(/.jpg$/, workboxSW.strategies.cacheFirst({
+  "cacheName": "image-cache",
+  "cacheExpiration": {
+    "maxEntries": 20
+  }
+}), 'GET');
+workboxSW.router.registerRoute(/fonts/, workboxSW.strategies.cacheFirst({
+  "cacheName": "font-cache",
+  "cacheExpiration": {
+    "maxEntries": 5
+  }
+}), 'GET');
