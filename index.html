@@ -63,6 +63,22 @@
 			}
 		}
 	</script>
+	<script>
+		/**
+		* Function that tracks a click on an outbound link in Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+		* using 'navigator.sendBeacon' in browser that support it.
+		*/
+		var trackOutboundLink = function (categoryName, url) {
+			gtag('event', 'click', {
+				'event_category': categoryName,
+				'event_label': url,
+				'transport_type': 'beacon',
+				'event_callback': function () { window.open(url, '_blank'); }
+			});
+		}
+	</script>
 </head>
 
 <body>
@@ -70,7 +86,7 @@
 	<!-- Header -->
 	<header id="header" class="alt">
 		<div class="logo">
-			<a href="index.html">
+			<a href="#">
 				Vivero
 				<span>el</span> Jardín
 			</a>
@@ -104,7 +120,7 @@
 		<article class="sticky visible">
 			<div class="inner">
 				<header>
-					<p>Excelente surtido de plantas en Guadalajara
+					<p>Extenso surtido de plantas en Guadalajara
 					</p>
 					<span class="image logo">
 						<img src="images/logo-big.png" alt="Vivero el Jardin">
@@ -145,16 +161,16 @@
 						<h2>Vivero el Jardín</h2>
 					</header>
 
-					<p>Vivero el Jardín es una empresa dedicada a la producción y comercialización de plantas de ornato, especializada en la
-						venta al mayoreo y con servicio al menudeo.</p>
+					<p>Somos una empresa dedicada a la producción y comercialización de plantas de ornato, especializada en la venta al mayoreo
+						y con servicio al menudeo.</p>
 
 					<p>Tomamos en cuenta las variaciones estacionales para contar con el mejor surtido, calidad y precio durante todo el año.</p>
 
 					<p>Contamos con 18,000 m² de instalaciones en un solo lugar dentro de la zona metropolitana de Guadalajara.</p>
 
-					<p>Para nosotros las plantas tienen importancia ambiental, estética y cultural. Entendemos y difundimos la importancia
+					<p>Para nosotros las plantas tienen importancia ambiental, estética y cultural; entendemos y difundimos la importancia
 						de vivir en armonía con la naturaleza, reconocemos las necesidades de quien requiere decorar un pequeño balcón o de
-						quien tiene la fortuna de contar con amplios espacios.</p>
+						quien tiene la necesidad de arreglar amplios espacios.</p>
 
 					<p>Con nosotros podrán encontrar una amplia gama de opciones para elaborar los distintos proyectos, estilos y necesidades
 						de su jardín o de su hogar tanto en interiores como en exteriores.</p>
@@ -175,7 +191,8 @@
 									<ul class="actions">
 										<li>
 											<a href="https://www.google.com/maps/dir//Vivero+El+Jard%C3%ADn/data=!4m8!4m7!1m0!1m5!1m1!1s0x8428ac64da89b55f:0xffc9e2a8bed784a6!2m2!1d-103.43883799999999!2d20.620006?_ga=2.21399547.1182446503.1514317659-1594905411.1513956759"
-											 class="button special icon fa-map">Direcciones</a>
+											 onclick="trackOutboundLink('Google Maps','https://www.google.com/maps/dir//Vivero+El+Jard%C3%ADn/data=!4m8!4m7!1m0!1m5!1m1!1s0x8428ac64da89b55f:0xffc9e2a8bed784a6!2m2!1d-103.43883799999999!2d20.620006?_ga=2.21399547.1182446503.1514317659-1594905411.1513956759'); return false;"
+											 target="_blank" class="button special icon fa-map">Direcciones</a>
 										</li>
 									</ul>
 								</div>
@@ -183,15 +200,17 @@
 									<h3>Contacto</h3>
 									<p>Tel: 36847261
 										<br>Correo:
-										<a href="mailto:info@viveroeljardin.mx">info@viveroeljardin.mx</a>
+										<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto','mailto:info@viveroeljardin.mx'); return false;"
+										 target="_blank">info@viveroeljardin.mx</a>
 									</p>
 
 									<ul class="actions">
 										<li>
-											<a href="tel:36847261" class="button special icon fa-phone">Llamar</a>
+											<a href="tel:36847261" onclick="trackOutboundLink('Tel','tel:36847261'); return false;" target="_blank" class="button special icon fa-phone">Llamar</a>
 										</li>
 										<li>
-											<a href="https://api.whatsapp.com/send?phone=523317158679" class="button special icon fa-whatsapp">Whatsapp</a>
+											<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp','https://api.whatsapp.com/send?phone=523317158679'); return false;"
+											 target="_blank" class="button special icon fa-whatsapp">Whatsapp</a>
 										</li>
 									</ul>
 								</div>
@@ -281,17 +300,20 @@
 		<div class="container">
 			<ul class="icons">
 				<li>
-					<a href="https://www.facebook.com/viveroeljardin.mx" class="icon fa-facebook">
+					<a href="https://www.facebook.com/viveroeljardin.mx" onclick="trackOutboundLink('Facebook','https://www.facebook.com/viveroeljardin.mx'); return false;"
+					 target="_blank" class="icon fa-facebook">
 						<span class="label">Facebook</span>
 					</a>
 				</li>
 				<li>
-					<a href="https://api.whatsapp.com/send?phone=523317158679" class="icon fa-whatsapp">
+					<a href="https://api.whatsapp.com/send?phone=523317158679" onclick="trackOutboundLink('WhatsApp','https://api.whatsapp.com/send?phone=523317158679'); return false;"
+					 target="_blank" class="icon fa-whatsapp">
 						<span class="label">Whatsapp</span>
 					</a>
 				</li>
 				<li>
-					<a href="mailto:administracion@viveroeljardin.mx" class="icon fa-envelope-o">
+					<a href="mailto:info@viveroeljardin.mx" onclick="trackOutboundLink('Mailto','mailto:info@viveroeljardin.mx'); return false;"
+					 target="_blank" class="icon fa-envelope-o">
 						<span class="label">Email</span>
 					</a>
 				</li>
