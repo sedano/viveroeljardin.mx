@@ -4072,7 +4072,7 @@
 			-webkit-transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			-ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			transition: opacity 1.5s ease-in-out, visibility 1.5s;
-			background: #000000;
+			background: #1B5811;
 			content: '';
 			display: block;
 			height: 100%;
@@ -4238,10 +4238,10 @@
 				transition: none !important;
 			}
 
-		body.is-loading .banner:after {
-			opacity: 1.0;
+		/* body.is-loading .banner:after {
+			opacity: 1;
 			visibility: visible;
-		}
+		} */
 
 		@media screen and (max-width: 1280px) {
 

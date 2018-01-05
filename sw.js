@@ -40,7 +40,7 @@ const fileManifest = [
   },
   {
     "url": "assets/css/main.css",
-    "revision": "59793015af35c12cf47019b2f8c739e7"
+    "revision": "53b42d54c44fd78f6b08f5a14e34c9e0"
   },
   {
     "url": "assets/fonts/fontawesome-webfont.eot",
