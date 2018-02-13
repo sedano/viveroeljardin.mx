@@ -132,7 +132,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "fdd8edadc2bf3bc3c3c40b67afd62b36"
+    "revision": "9352e8b92962abe66cfc5b47be71e0dd"
   },
   {
     "url": "logo.png",
