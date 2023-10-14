@@ -1,4 +1,4 @@
-importScripts('workbox-sw.prod.v2.1.2.js');
+importScripts('workbox-sw.prod.v2.1.3.js');
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -72,23 +72,23 @@ const fileManifest = [
   },
   {
     "url": "assets/js/jquery.scrollex.min.js",
-    "revision": "f89065e3d988006af9791b44561d7c90"
+    "revision": "830ab00c7d7a5be0c57f91e35bd32376"
   },
   {
     "url": "assets/js/jquery.scrolly.min.js",
-    "revision": "3cb632af86e884723ff92a3b867ae9bb"
+    "revision": "ce1ff8f80506b5a34422043e6465cd04"
   },
   {
     "url": "assets/js/main.js",
-    "revision": "65e08588bd32f0422d43bcbc4154af79"
+    "revision": "b21f770fd0ad84003cf4304f1562f780"
   },
   {
     "url": "assets/js/skel.min.js",
-    "revision": "63eae98d84a04c4ce52e92787d861838"
+    "revision": "8b982d4b23ba7d9b72a5dbeff328c207"
   },
   {
     "url": "assets/js/util.js",
-    "revision": "fd2716a7b68ce7748c9676787b61db43"
+    "revision": "31f3e8b0cbedca627878a2b6d868bc14"
   },
   {
     "url": "browserconfig.xml",
@@ -108,11 +108,11 @@ const fileManifest = [
   },
   {
     "url": "gallery.html",
-    "revision": "707e76d2c8b227fb86acba71875ec968"
+    "revision": "e09438e725219c8b5f340e59c4f75129"
   },
   {
     "url": "gulpfile.js",
-    "revision": "7f79869c09a25532ffffe8a6e591ffac"
+    "revision": "fbc934568b0d621a9baeec813687c38c"
   },
   {
     "url": "images/ic_jardin.svg",
@@ -132,7 +132,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9352e8b92962abe66cfc5b47be71e0dd"
+    "revision": "41fff8f89c102fcc64621f8a079f23d5"
   },
   {
     "url": "logo.png",
@@ -149,6 +149,10 @@ const fileManifest = [
   {
     "url": "safari-pinned-tab.svg",
     "revision": "90ceeeb2129f205dc8f2edf65776b666"
+  },
+  {
+    "url": "workbox-sw.prod.v2.1.2.js",
+    "revision": "685d1ceb6b9a9f94aacf71d6aeef8b51"
   }
 ];
 
